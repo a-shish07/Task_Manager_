@@ -60,7 +60,7 @@ const TaskItem = ({ task }) => {
     setIsEditing(false);
     setEditTitle(task.title);
     setEditDescription(task.description);
-    setEditDueDate(task.dueDate); // Reset fields if editing is canceled
+    setEditDueDate(task.dueDate); 
   };
 
   return (
@@ -136,7 +136,7 @@ const TaskItem = ({ task }) => {
         </>
       )}
 
-      {/* Modal Component */}
+      
       <Modal
         showModal={showModal}
         closeModal={closeModal}
