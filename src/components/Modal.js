@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Modal = ({ showModal, closeModal, confirmDelete }) => {
-  if (!showModal) return null; // Don't render if modal is not shown
+  if (!showModal) return null; 
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 p-4">
