@@ -1,19 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// Initial state
 const initialState = {
-  tasks: [], // List of tasks
-  filter: 'all', // Current filter: all, completed, incomplete, overdue
+  tasks: [], 
+  filter: 'all', 
 };
 
-// Utility function to check if a task is overdue
+
 const isOverdue = (dueDate) => {
   const today = new Date();
   const taskDueDate = new Date(dueDate);
-  return taskDueDate < today && !isNaN(taskDueDate); // Ensure valid and overdue date
+  return taskDueDate < today && !isNaN(taskDueDate); 
 };
 
-// Redux slice
+
 const taskSlice = createSlice({
   name: 'tasks',
   initialState,
@@ -53,10 +52,10 @@ const taskSlice = createSlice({
       const [removed] = reorderedTasks.splice(sourceIndex, 1);
       reorderedTasks.splice(destinationIndex, 0, removed);
     
-      state.tasks = reorderedTasks; // Update the state
+      state.tasks = reorderedTasks; 
     },
     setFilter: (state, action) => {
-      state.filter = action.payload; // Update the filter state
+      state.filter = action.payload; 
     },
   },
 });
