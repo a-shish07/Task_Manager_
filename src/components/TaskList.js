@@ -15,7 +15,7 @@ const TaskList = () => {
     return taskDueDate < today && !isNaN(taskDueDate);
   };
 
-  // Apply filtering logic
+  
   const filteredTasks = tasks.filter((task) => {
     if (filter === 'completed') return task.completed;
     if (filter === 'incomplete') return !task.completed;
@@ -23,14 +23,13 @@ const TaskList = () => {
     return true;
   });
 
-  // Handle drag and drop
+  
   const handleDragEnd = (result) => {
-    if (!result.destination) return; // If dropped outside the list
+    if (!result.destination) return; 
 
     const sourceIndex = result.source.index;
     const destinationIndex = result.destination.index;
 
-    // Dispatch reorderTasks action to update Redux state
     dispatch(reorderTasks({ sourceIndex, destinationIndex }));
   };
 
