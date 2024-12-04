@@ -9,7 +9,6 @@ const Header = () => {
   return (
     <header className="bg-blue-500 p-4 shadow-md">
       <div className="flex flex-col md:flex-row justify-between items-center">
-        {/* Logo Section */}
         <div className="flex items-center mb-4 md:mb-0">
           <img
             src="https://img.icons8.com/cute-clipart/64/overtime.png"
@@ -21,7 +20,7 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Filters Section */}
+        
         <div className="flex flex-wrap justify-center md:space-x-4 mb-4 md:mb-0">
           <button
             onClick={() => dispatch(setFilter('all'))}
@@ -49,7 +48,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* User Profile Section */}
+        
         <div className="flex items-center space-x-3">
           <span className="text-white text-sm md:text-base font-medium">
             Hi, Ashish Dubey
