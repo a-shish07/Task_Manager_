@@ -11,15 +11,13 @@ const AddTask = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if all fields are filled
     if (!title.trim() || !description.trim() || !dueDate.trim()) {
       alert('Please fill in all the details before submitting.');
       return;
     }
 
-    // Dispatch the action with the full task details
     dispatch(addTask({ title, description, dueDate }));
-    setTitle(''); // Clear input fields after adding task
+    setTitle('');
     setDescription('');
     setDueDate('');
   };
