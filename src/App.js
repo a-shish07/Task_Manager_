@@ -11,10 +11,9 @@ const App = () => {
       <Header />
       <div className="mt-10">
         <Routes>
-          {/* Define the /tasks route for the Task Dashboard */}
+        
           <Route path="/tasks" element={<TaskDashboard />} />
-          
-          {/* Define the root route */}
+        
           <Route
             path="/"
             element={
